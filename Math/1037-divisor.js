@@ -10,7 +10,6 @@ var findN = () => {
   divisors.sort((a, b) => {
     return a - b;
   });
-  console.log(divisors);
   N =
     divisors.length >= 2
       ? divisors[0] * divisors[divisors.length - 1]
