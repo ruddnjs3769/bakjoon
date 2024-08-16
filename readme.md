@@ -15,7 +15,7 @@ https://code.plus/course/51
 5. [17425번- 약수의 합](/Math/17425-divisor-sum.js)✅
 6. [2609번 - 최대공약수와 최소공배수](/Math/2609-gcd-lcm.js)✅
 7. [1978번 - 소수 찾기](/Math/1978-find-prime.js)✅
-8. [1929번 - 소수 구하기](/Math/1929-find-prime.js)
+8. [1929번 - 소수 구하기](/Math/1929-find-prime.js) ✅
 9. [6588번 - 골드바흐의 추측](/Math/6588-goldbach.js)
 
 ## 브루트 포스
