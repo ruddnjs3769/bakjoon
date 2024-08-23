@@ -23,7 +23,7 @@ https://code.plus/course/51
 ### 기본
 
 1. [2309번 - 일곱 난쟁이](/BruteForce/2309-seven-dwarfs.js) ✅
-2. [3085번 - 사탕 게임](/BruteForce/3085-candy-game.js)
+2. [3085번 - 사탕 게임](/BruteForce/3085-candy-game.js) ✅
 3. [1476번 - 날짜 계산](/BruteForce/1476-date-calc.js)
 4. [14500번 - 테트로미노](/BruteForce/14500-tetromino.js)
 5. [6064번 - 카잉 달력](/BruteForce/6064-kaing-calendar.js)
