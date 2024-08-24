@@ -24,7 +24,7 @@ https://code.plus/course/51
 
 1. [2309번 - 일곱 난쟁이](/BruteForce/2309-seven-dwarfs.js) ✅
 2. [3085번 - 사탕 게임](/BruteForce/3085-candy-game.js) ✅
-3. [1476번 - 날짜 계산](/BruteForce/1476-date-calc.js)
+3. [1476번 - 날짜 계산](/BruteForce/1476-date-calc.js) - nodejs 환경 메모리 초과 이슈..😂
 4. [14500번 - 테트로미노](/BruteForce/14500-tetromino.js)
 5. [6064번 - 카잉 달력](/BruteForce/6064-kaing-calendar.js)
 6. [1748번 - 수 이어 쓰기 1](/BruteForce/1748-write-number.js)
