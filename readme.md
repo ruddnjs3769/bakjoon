@@ -27,7 +27,7 @@ https://code.plus/course/51
 3. [1476번 - 날짜 계산](/BruteForce/1476-date-calc.js) - nodejs 환경 메모리 초과 이슈..😂
 4. [1107번 - 리모컨](/BruteForce/1107-remote.js) ✅
 5. [14500번 - 테트로미노](/BruteForce/14500-tetromino.js) 🤦‍♀️❌
-6. [6064번 - 카잉 달력](/BruteForce/6064-kaing-calendar.js)
+6. [6064번 - 카잉 달력](/BruteForce/6064-kaing-calendar.js) ✅
 7. [1748번 - 수 이어 쓰기 1](/BruteForce/1748-write-number.js)
 8. [9095번 - 1, 2, 3 더하기](/BruteForce/9095-123-add.js)
 
