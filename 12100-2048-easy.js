@@ -3,66 +3,93 @@ var fs = require("fs");
 var input = fs.readFileSync("input.txt", "utf-8").trim().split("\n");
 
 const n = parseInt(input[0]);
-const board = input.slice(1).map((el) => el.split(" ").map(Number));
+const board = input.splice(1).map((el) => el.split(" ").map(Number));
 
-const move = (board, dir) => {
-  const newBoard = JSON.parse(JSON.stringify(board)); // Deep copy
-
-  const merge = (arr) => {
-    const merged = [];
-    for (let i = 0; i < arr.length; i++) {
-      if (i < arr.length - 1 && arr[i] === arr[i + 1]) {
-        merged.push(arr[i] * 2);
-        i++;
-      } else {
-        merged.push(arr[i]);
-      }
-    }
-    return merged;
-  };
-
-  if (dir === 0 || dir === 1) {
-    // left or right
-    for (let i = 0; i < n; i++) {
-      let row = newBoard[i].filter((el) => el);
-      row = dir === 0 ? merge(row) : merge(row.reverse()).reverse();
-      newBoard[i] =
-        dir === 0
-          ? [...row, ...Array(n - row.length).fill(0)]
-          : [...Array(n - row.length).fill(0), ...row];
-    }
-  } else {
-    // up or down
+const rotate = (board) => {
+  let newBoard = Array.from(Array(n), () => Array(n).fill(0));
+  for (let i = 0; i < n; i++) {
     for (let j = 0; j < n; j++) {
-      let col = newBoard.map((row) => row[j]).filter((x) => x);
-      col = dir === 2 ? merge(col) : merge(col.reverse()).reverse();
-      col =
-        dir === 2
-          ? [...col, ...Array(n - col.length).fill(0)]
-          : [...Array(n - col.length).fill(0), ...col];
-      for (let i = 0; i < n; i++) {
-        newBoard[i][j] = col[i];
-      }
+      newBoard[j][i] = board[i][j];
     }
   }
   return newBoard;
 };
 
-const getMaxBlock = (board) => Math.max(...board.flat());
-
-const dfs = (board, depth) => {
-  if (depth === 5) {
-    return getMaxBlock(board);
-  }
-
-  let maxValue = 0;
-  for (let i = 0; i < 4; i++) {
-    const newBoard = move(board, i);
-    if (JSON.stringify(newBoard) !== JSON.stringify(board)) {
-      maxValue = Math.max(maxValue, dfs(newBoard, depth + 1));
+const merge = (row) => {
+  let newRow = row.filter((el) => el != 0);
+  for (let j = 1; j < newRow.length; j++) {
+    if (newRow[j] === newRow[j - 1]) {
+      newRow[j - 1] *= 2;
+      newRow[j] = 0;
     }
   }
-  return maxValue;
+  newRow = newRow.filter((el) => el != 0);
+  while (newRow.length < n) {
+    newRow.push(0);
+  }
+  return newRow;
 };
 
-console.log(dfs(board, 0));
+const up = (board) => {
+  board = rotate(board);
+  let newBoard = [];
+  for (let i = 0; i < n; i++) {
+    let row = merge(board[i]);
+    newBoard.push(row);
+  }
+  return rotate(newBoard);
+};
+
+const down = (board) => {
+  board = rotate(board);
+  let newBoard = [];
+  for (let i = 0; i < n; i++) {
+    let row = merge(board[i].reverse());
+    newBoard.push(row.reverse());
+  }
+  return rotate(newBoard);
+};
+
+const left = (board) => {
+  let newBoard = [];
+  for (let i = 0; i < n; i++) {
+    let row = merge(board[i]);
+    newBoard.push(row);
+  }
+  return newBoard;
+};
+
+const right = (board) => {
+  let newBoard = [];
+  for (let i = 0; i < n; i++) {
+    let row = merge(board[i].reverse());
+    newBoard.push(row.reverse());
+  }
+  return newBoard;
+};
+
+const bfs = (n, initialBoard) => {
+  let queue = [[initialBoard, 0]];
+  let answer = 0;
+
+  while (queue.length > 0) {
+    const [board, count] = queue.shift();
+    if (count === 5) {
+      for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n; j++) {
+          if (answer < board[i][j]) {
+            answer = board[i][j];
+          }
+        }
+      }
+    } else {
+      queue.push([up([...board]), count + 1]);
+      queue.push([down([...board]), count + 1]);
+      queue.push([left([...board]), count + 1]);
+      queue.push([right([...board]), count + 1]);
+    }
+  }
+  console.log(answer);
+};
+
+bfs(n, board);
