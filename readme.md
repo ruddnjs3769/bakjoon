@@ -38,7 +38,7 @@ https://code.plus/course/51
 3. [15651번 - N과 M (3)](/BruteForce/NM/15651-NM-3.js) ✅
 4. [15652번 - N과 M (4)](/BruteForce/NM/15652-NM-4.js) ✅
 5. [15654번 - N과 M (5)](/BruteForce/NM/15654-NM-5.js) ✅
-6. [15655번 - N과 M (6)](/BruteForce/NM/15655-NM-6.js)
+6. [15655번 - N과 M (6)](/BruteForce/NM/15655-NM-6.js) ✅
 7. [15656번 - N과 M (7)](/BruteForce/NM/15656-NM-7.js)
 8. [15657번 - N과 M (8)](/BruteForce/NM/15657-NM-8.js)
 9. [18290번 - NM과 K (1)](/BruteForce/NM/18290-NMK-1.js)
