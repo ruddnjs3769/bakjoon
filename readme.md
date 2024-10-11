@@ -45,12 +45,23 @@ https://code.plus/course/51
 
 ### 재귀
 
-1. [9095번 - 1, 2, 3 더하기](/BruteForce/9095-123-add.js)✅ <!-- 다이나믹 프로그래밍 -->
-2. [1759번 - 암호 만들기](/BruteForce/1759-password.js)✅ <!-- 백트래킹, 재귀 -->
-3. [14501번 - 퇴사](/BruteForce/14501-quit.js)✅ <!-- 다이나믹 프로그래밍 -->
-4. [14889번 - 스타트와 링크](/BruteForce/14889-start-link.js) ✅ <!-- 백트래킹, 재귀 -->
-5. [15661번 - 링크와 스타트](/BruteForce/15661-link-start.js) ✅ <!-- 백트래킹, 재귀 -->
-6. [2529번 - 부등호](/BruteForce/2529-inequality.js) ✅ <!-- 백트래킹, 재귀 -->
-7. [1248번 - Guess](/BruteForce/1248-guess.js) ✅ <!-- 백트래킹, 재귀 -->
+1. [9095번 - 1, 2, 3 더하기](/BruteForce/Recursion/9095-123-add.js)✅ <!-- 다이나믹 프로그래밍 -->
+2. [1759번 - 암호 만들기](/BruteForce/Recursion/1759-password.js)✅ <!-- 백트래킹, 재귀 -->
+3. [14501번 - 퇴사](/BruteForce/Recursion/14501-quit.js)✅ <!-- 다이나믹 프로그래밍 -->
+4. [14889번 - 스타트와 링크](/BruteForce/Recursion/14889-start-link.js) ✅ <!-- 백트래킹, 재귀 -->
+5. [15661번 - 링크와 스타트](/BruteForce/Recursion/15661-link-start.js) ✅ <!-- 백트래킹, 재귀 -->
+6. [2529번 - 부등호](/BruteForce/Recursion/2529-inequality.js) ✅ <!-- 백트래킹, 재귀 -->
+7. [1248번 - Guess](/BruteForce/Recursion/1248-guess.js) ✅ <!-- 백트래킹, 재귀 -->
 
-8. [12100번 - 2048 (Easy)](/12100-2048-easy.js) 😂
+### 순열
+
+1. [10972번 - 다음 순열](/BruteForce/Permutation/10972-next-permutation.js)
+2. [10973번 - 이전 순열](/BruteForce/Permutation/10973-prev-permutation.js)
+3. [10974번 - 모든 순열](/BruteForce/Permutation/10974-all-permutation.js)
+4. [10819번 - 차이를 최대로](/BruteForce/Permutation/10819-max-difference.js)
+5. [10971번 - 외판원 순회 2](/BruteForce/Permutation/10971-tsp-2.js)
+6. [6603번 - 로또](/BruteForce/Permutation/6603-lotto.js)
+
+## 번외
+
+1. [12100번 - 2048 (Easy)](/12100-2048-easy.js) 😂
